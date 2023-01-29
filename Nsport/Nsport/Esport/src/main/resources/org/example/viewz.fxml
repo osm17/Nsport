@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="383.0" prefWidth="712.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="org.example.controller.Controller">
+    <HBox>
+        <VBox>
+            <TextField fx:id="searchBar" promptText="Search by tag..."/>
+            <ListView fx:id="noteList" prefHeight="256.5" prefWidth="151.0" onMouseClicked="#noteClicked"/>
+        </VBox>
+        <VBox prefHeight="318.0" prefWidth="394.0">
+            <TextField fx:id="noteTitle" prefHeight="25.0" prefWidth="245.0" promptText="Note Title.."/>
+            <TextArea fx:id="noteContent" prefHeight="285.0" prefWidth="394.0" promptText="Note content.."/>
+            <HBox>
+                <Button fx:id="newNoteButton" text="New Note" onMouseClicked="#addNewNote">
+                    <HBox.margin>
+                        <Insets left="100.0" top="10.0"/>
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="deleteButton" text="Delete" onMouseClicked="#noteDelete">
+                    <HBox.margin>
+                        <Insets left="10.0" top="10.0"/>
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="updateButton" text="Update" onMouseClicked="#updateNote">
+                    <HBox.margin>
+                        <Insets left="10.0" top="10.0"/>
+                    </HBox.margin>
+                </Button>
+            </HBox>
+        </VBox>
+        <VBox>
+            <ListView fx:id="tagList" prefHeight="255.0" prefWidth="149.0"/>
+            <TextField fx:id="newTagField" prefHeight="30.0" promptText="Enter new tag...">
+                <VBox.margin>
+                    <Insets/>
+                </VBox.margin>
+            </TextField>
+            <HBox>
+                <Button fx:id="removeTagButton" text="Remove Tag" onMouseClicked="#removeTag">
+                    <HBox.margin>
+                        <Insets top="12.0"/>
+                    </HBox.margin>
+                </Button>
+                <Button fx:id="addTagButton" text="Add Tag" onMouseClicked="#addTag">
+                    <HBox.margin>
+                        <Insets left="5.0" top="12.0"/>
+                    </HBox.margin>
+                </Button>
+            </HBox>
+        </VBox>
+    </HBox>
+    <padding>
+        <Insets left="10.0" top="30.0"/>
+    </padding>
+</VBox>

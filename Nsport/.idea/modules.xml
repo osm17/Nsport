@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Nsport/Esport/Esport.iml" filepath="$PROJECT_DIR$/Nsport/Esport/Esport.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Nsport.iml" filepath="$PROJECT_DIR$/.idea/Nsport.iml" />
+    </modules>
+  </component>
+</project>
